@@ -1,0 +1,21 @@
+{
+  "name": "lightweight-react-starter",
+  "version": "1.0.0",
+  "description": "A lightweight starter with ES6, Webpack, React.",
+  "main": "main.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build"
+  },
+  "author": "Hugo",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^5.8.25",
+    "babel-loader": "^5.3.2",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.0"
+  },
+  "dependencies": {
+    "react": "^0.14.0"
+  }
+}
