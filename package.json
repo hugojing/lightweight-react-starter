@@ -1,10 +1,18 @@
 {
   "name": "lightweight-react-starter",
+<<<<<<< HEAD
   "version": "1.0.1",
   "description": "A lightweight starter with ES6, Webpack, React.",
   "main": "main.js",
   "scripts": {
     "build": "webpack --config webpack.build.config.js",
+=======
+  "version": "1.0.0",
+  "description": "A lightweight starter with ES6, Webpack, React.",
+  "main": "main.js",
+  "scripts": {
+    "build": "webpack",
+>>>>>>> b60c3207e6b48bdc0bef8e09a1909f2a34db1311
     "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build"
   },
   "author": "Hugo",
