@@ -24,7 +24,7 @@ module.exports = {
     },
     output: {
         path: DIST_PATH,
-	      publicPath: DIST_PATH,
+      	publicPath: '/',
         filename: 'bundle.js',
     },
     module: {
@@ -34,7 +34,7 @@ module.exports = {
             loader: 'babel' // 加载模块 "babel" 是 "babel-loader" 的缩写
         }, {
             test: /\.css$/, // Only .css files
-						loader: ExtractTextPlugin.extract("style-loader", "css-loader?modules&sourceMap&importLoaders=1&localIdentName=[local]___[hash:base64:5]", "postcss-loader")
+			loader: ExtractTextPlugin.extract("style-loader", "css-loader?modules&sourceMap&importLoaders=1&localIdentName=[local]___[hash:base64:5]", "postcss-loader")
         }, {
             test: /\.(png|jpg|gif|svg|woff|svg|ttf|eot)$/,
             // include: [SRC_PATH, MODULE_PATH],
@@ -43,10 +43,10 @@ module.exports = {
     },
     resolve: {
         alias:{  // 设置别名，快速寻址
-						'components': path.resolve(SRC_PATH, 'components'),
+			'components': path.resolve(SRC_PATH, 'components'),
             'colors': path.resolve(SRC_PATH, 'styles', 'config', 'colors.css'),
             'images': path.resolve(SRC_PATH, 'images'),
-						'react': path.resolve(MODULE_PATH, 'react', 'react'),
+			'react': path.resolve(MODULE_PATH, 'react', 'react'),
             'react-dom': path.resolve(MODULE_PATH, 'react', 'lib', 'ReactDOM'),
             'react-router': path.resolve(MODULE_PATH, 'react-router', 'lib'),
             'superagent': path.resolve(MODULE_PATH, 'superagent', 'lib', 'client')
@@ -60,7 +60,7 @@ module.exports = {
         ];
     },
     plugins: [
-				new ExtractTextPlugin("styles.css"), // 样式文件独立出来
+		new ExtractTextPlugin("styles.css"), // 样式文件独立出来
     ]
 };
 
